@@ -53,7 +53,7 @@ const Footer = () => {
                         <MdContactPhone style={{ color: '#FF7E00' }} size={20} /> 09166047725
                    </Col>
                 </Row >
-                <Row >
+                <Row style={{ marginBottom: '3vh' }}>
                     <Col>
                         <MdEmail style={{ color: '#FF7E00' }} size={20} /> emiljohnbenitez24@gmail.com
                    </Col>

@@ -24,8 +24,8 @@ const Skills = () => {
                 <ScrollAnimation animateIn="bounceInLeft" animateOnce={true}>
                     <h1 style={{ color: '#FF7E00', fontWeight: 'bold', padding: '5vh' }}>My Skills</h1>
                 </ScrollAnimation>
-                <Row style={{ padding: '5vh' }}>
-                    <Col>
+                <Row style={{ padding: '5vh' }} className="justify-content-md-center">
+                    <Col md="auto">
                         <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
                             <h4>Front End</h4>
                             <hr style={{ border: '5px solid white', width: '15vh' }} />
@@ -36,14 +36,14 @@ const Skills = () => {
                             <p>ReactJS & Redux</p>
                         </ScrollAnimation>
                     </Col>
-                    <Col>
+                    <Col md="auto">
                         <ScrollAnimation animateIn="fadeIn" delay={500} animateOnce={true}>
                             <h4>Back End</h4>
                             <hr style={{ border: '5px solid white', width: '15vh' }} />
                             <p>PHP</p>
                         </ScrollAnimation>
                     </Col>
-                    <Col>
+                    <Col md="auto">
                         <ScrollAnimation animateIn="fadeIn" delay={1000} animateOnce={true}>
                             <h4>Database</h4>
                             <hr style={{ border: '5px solid white', width: '15vh' }} />
