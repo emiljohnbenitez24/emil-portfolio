@@ -34,7 +34,7 @@ const Footer = () => {
                 > <IoIosArrowUp size={32}
                     />
                 </Link>
-                <Row style={{ padding: '5vh' }}>
+                <Row style={{ padding: '4vh' }}>
                     <Col>
                         <a style={{ color: '#FF7E00' }} href="https://www.facebook.com/kriemjohn.benitez.7"><FaFacebook size={20} style={{ marginRight: '2vh' }} /></a>
                         <a style={{ color: '#FF7E00' }} href="#"><FaGithub size={20} style={{ marginRight: '2vh' }} /></a>
@@ -53,7 +53,7 @@ const Footer = () => {
                         <MdContactPhone style={{ color: '#FF7E00' }} size={20} /> 09166047725
                    </Col>
                 </Row >
-                <Row style={{ marginBottom: '3vh' }}>
+                <Row >
                     <Col>
                         <MdEmail style={{ color: '#FF7E00' }} size={20} /> emiljohnbenitez24@gmail.com
                    </Col>
