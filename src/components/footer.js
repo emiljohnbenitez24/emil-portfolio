@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { IoIosArrowUp } from 'react-icons/io'
 import { Link } from 'react-scroll'
 import { Container, Row, Col } from 'react-bootstrap'
-import { FaFacebook, FaGithub, FaInstagram, FaTwitterSquare } from 'react-icons/fa'
+import { FaFacebook, FaGithub, FaInstagram, FaTwitterSquare, FaLinkedin } from 'react-icons/fa'
 import { MdContactPhone, MdEmail } from 'react-icons/md'
 
 
@@ -37,9 +37,11 @@ const Footer = () => {
                 <Row style={{ padding: '4vh' }}>
                     <Col>
                         <a style={{ color: '#FF7E00' }} href="https://www.facebook.com/kriemjohn.benitez.7"><FaFacebook size={20} style={{ marginRight: '2vh' }} /></a>
+                        <a style={{ color: '#FF7E00' }} href="https://www.linkedin.com/in/emil-john-benitez-11987b146/"><FaLinkedin size={20} style={{ marginRight: '2vh' }} /></a>
                         <a style={{ color: '#FF7E00' }} href="#"><FaGithub size={20} style={{ marginRight: '2vh' }} /></a>
                         <a style={{ color: '#FF7E00' }} href="#"><FaInstagram size={20} style={{ marginRight: '2vh' }} /></a>
                         <a style={{ color: '#FF7E00' }} href="#"><FaTwitterSquare size={20} /></a>
+
                     </Col>
                 </Row >
                 <Row >

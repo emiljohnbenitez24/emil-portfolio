@@ -45,7 +45,7 @@ const About = () => {
                     </Col>
                     <Col sm={8}>
                         <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
-                            <p style={{ opacity: '.7' }}>I'm a Front End Web Developer from Pasig City
+                            <p style={{ opacity: '.6' }}>I'm a Front End Web Developer from Pasig City
                   I'm passionate about building interactive websites, I loved coding and learning something new
                   about Web Development.</p >
                         </ScrollAnimation>
