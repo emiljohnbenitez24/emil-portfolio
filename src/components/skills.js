@@ -27,7 +27,7 @@ const Skills = () => {
                 <Row style={{ padding: '5vh' }} className="justify-content-md-center">
                     <Col md="auto">
                         <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
-                            <h4>Front End</h4>
+                            <h4 style={{ color: '#FF7E00' }}>Front End</h4>
                             <hr style={{ border: '5px solid white', width: '15vh' }} />
                             <p>HTML5</p>
                             <p>CSS3</p>
@@ -38,14 +38,14 @@ const Skills = () => {
                     </Col>
                     <Col md="auto">
                         <ScrollAnimation animateIn="fadeIn" delay={500} animateOnce={true}>
-                            <h4>Back End</h4>
+                            <h4 style={{ color: '#FF7E00' }}> Back End</h4>
                             <hr style={{ border: '5px solid white', width: '15vh' }} />
                             <p>PHP</p>
                         </ScrollAnimation>
                     </Col>
                     <Col md="auto">
                         <ScrollAnimation animateIn="fadeIn" delay={1000} animateOnce={true}>
-                            <h4>Database</h4>
+                            <h4 style={{ color: '#FF7E00' }}>Database</h4>
                             <hr style={{ border: '5px solid white', width: '15vh' }} />
                             <p>MySql</p>
                             <p>MongoDB</p>

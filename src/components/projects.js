@@ -3,10 +3,11 @@ import styled from 'styled-components';
 import { Container, Row, Col, Image } from 'react-bootstrap'
 import flower from '.././assets/flower.png'
 import noimage from '.././assets/noimage.jpg';
+import ScrollAnimation from 'react-animate-on-scroll'
 
 const Projects = () => {
 
-    const MainDiv = styled.div`
+  const MainDiv = styled.div`
     font-family:arial cursive;
     background:#F8F8FF;
     text-align:center;
@@ -92,44 +93,52 @@ const Projects = () => {
       }
         `
 
-    return (
-        <MainDiv id="projects">
-            <Container style={{ padding: '5vh' }}>
-                <h1 style={{ color: '#FF7E00', fontWeight: 'bold' }}>My Projects</h1>
-                <Row style={{ padding: '5vh' }}>
-                    <Col>
-                        <div class="hovereffect" style={{ marginBottom: '5vh' }}>
-                            <Image width={200} class="img-responsive" src={noimage} />
-                            <div class="overlay">
-                                <h2>Todo App</h2>
-                                <a class="info" >Soon To Build</a>
-                            </div>
-                        </div>
-                    </Col>
-                    <Col>
-                        <div class="hovereffect" style={{ marginBottom: '5vh' }}>
-                            <Image width={200} class="img-responsive" src={flower} />
-                            <div class="overlay">
-                                <h2>FlowerShop WebApp</h2>
-                                <a class="info" href="https://ejflowershop.herokuapp.com/">View Project</a>
-                            </div>
-                        </div>
-                    </Col>
-                    <Col>
-                        <div class="hovereffect">
-                            <Image width={200} class="img-responsive" src={noimage} />
-                            <div class="overlay">
-                                <h2>Evaluation WebApp</h2>
-                                <a class="info" >Soon To Build</a>
-                            </div>
-                        </div>
-                    </Col>
-                </Row>
-            </Container>
+  return (
+    <MainDiv id="projects">
+      <Container style={{ padding: '5vh' }}>
+        <ScrollAnimation animateIn="bounceInRight" animateOnce={true}>
+          <h1 style={{ color: '#FF7E00', fontWeight: 'bold' }}>My Projects</h1>
+        </ScrollAnimation>
+        <Row style={{ padding: '5vh' }}>
+          <Col>
+            <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
+              <div class="hovereffect" style={{ marginBottom: '5vh' }}>
+                <Image width={200} class="img-responsive" src={noimage} />
+                <div class="overlay">
+                  <h2>Todo App</h2>
+                  <a class="info" >Soon To Build</a>
+                </div>
+              </div>
+            </ScrollAnimation>
+          </Col>
+          <Col>
+            <ScrollAnimation animateIn="fadeIn" delay={500} animateOnce={true}>
+              <div class="hovereffect" style={{ marginBottom: '5vh' }}>
+                <Image width={200} class="img-responsive" src={flower} />
+                <div class="overlay">
+                  <h2>FlowerShop WebApp</h2>
+                  <a class="info" href="https://ejflowershop.herokuapp.com/">View Project</a>
+                </div>
+              </div>
+            </ScrollAnimation>
+          </Col>
+          <Col>
+            <ScrollAnimation animateIn="fadeIn" delay={1000} animateOnce={true}>
+              <div class="hovereffect">
+                <Image width={200} class="img-responsive" src={noimage} />
+                <div class="overlay">
+                  <h2>Evaluation WebApp</h2>
+                  <a class="info" >Soon To Build</a>
+                </div>
+              </div>
+            </ScrollAnimation>
+          </Col>
+        </Row>
+      </Container>
 
-        </MainDiv>
+    </MainDiv>
 
-    )
+  )
 }
 
 export default Projects
