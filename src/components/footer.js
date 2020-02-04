@@ -38,7 +38,7 @@ const Footer = () => {
                     <Col>
                         <a style={{ color: '#FF7E00' }} href="https://www.facebook.com/kriemjohn.benitez.7"><FaFacebook size={20} style={{ marginRight: '2vh' }} /></a>
                         <a style={{ color: '#FF7E00' }} href="https://www.linkedin.com/in/emil-john-benitez-11987b146/"><FaLinkedin size={20} style={{ marginRight: '2vh' }} /></a>
-                        <a style={{ color: '#FF7E00' }} href="#"><FaGithub size={20} style={{ marginRight: '2vh' }} /></a>
+                        <a style={{ color: '#FF7E00' }} href="https://github.com/emiljohnbenitez24"><FaGithub size={20} style={{ marginRight: '2vh' }} /></a>
                         <a style={{ color: '#FF7E00' }} href="#"><FaInstagram size={20} style={{ marginRight: '2vh' }} /></a>
                         <a style={{ color: '#FF7E00' }} href="#"><FaTwitterSquare size={20} /></a>
 
