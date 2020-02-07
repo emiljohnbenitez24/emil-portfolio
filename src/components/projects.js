@@ -62,7 +62,7 @@ const Projects = () => {
       .hovereffect a.info {
         display: inline-block;
         text-decoration: none;
-        padding: 7px 14px;
+        padding: 5px;
         border: 1px solid #fff;
         margin: 50px 0 0 0;
         background-color: transparent;
@@ -117,7 +117,8 @@ const Projects = () => {
                 <Image width={200} class="img-responsive" src={flower} />
                 <div class="overlay">
                   <h2>FlowerShop WebApp</h2>
-                  <a class="info" href="https://ejflowershop.herokuapp.com/">View Project</a>
+                  <a class="info" href="https://ejflowershop.herokuapp.com">View Project</a>
+                  <a class="info" href="https://github.com/emiljohnbenitez24/emil-flowershop">View Code</a>
                 </div>
               </div>
             </ScrollAnimation>
