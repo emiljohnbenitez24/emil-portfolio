@@ -27,6 +27,10 @@ const Home = () => {
     background:#000 url(${backgroundImg});
     font-family:arial;
     min-height:100vh;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     display:flex;
     color:white;
     background-attachment:fixed;
