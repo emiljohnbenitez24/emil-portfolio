@@ -137,7 +137,7 @@ const Home = () => {
                     spy={true}
                     smooth={true}
                     duration={500}
-                    offset={-50}
+                    offset={-80}
                 > <IoIosArrowDown size={32}
                     />
                 </Link>
