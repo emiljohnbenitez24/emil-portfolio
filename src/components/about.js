@@ -3,11 +3,6 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import styled, { keyframes } from 'styled-components';
 import { Container, Row, Col, Image } from 'react-bootstrap'
 import emilImg from '../assets/emil.png';
-import webImg from '../assets/webdev.png'
-import htmlImg from '../assets/html.png'
-import cssImg from '../assets/css.png'
-import jsImg from '../assets/javascript.png'
-import psImg from '../assets/photoshop.png'
 
 
 const About = () => {

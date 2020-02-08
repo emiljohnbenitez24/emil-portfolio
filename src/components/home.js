@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
 import backgroundImg from '.././assets/pasigcity.jpg'
 import { Container, Row, Col, Nav, Navbar } from 'react-bootstrap'
@@ -7,6 +7,21 @@ import { IoIosArrowDown } from 'react-icons/io'
 
 
 const Home = () => {
+
+    const [state, setState] = useState(true)
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll)
+    })
+
+    const handleScroll = () => {
+        let scrollTop = window.scrollY;
+        if (scrollTop >= 20) {
+            setState(false)
+        } else {
+            setState(true)
+        }
+    }
 
     const MainDiv = styled.div`
     background:#000 url(${backgroundImg});
@@ -18,6 +33,12 @@ const Home = () => {
     align-items:center;
     background-size:cover;
     position:relative;
+    .nav-scroll{
+        background-color:#FF7E00;
+        .navbar-brand{
+            color:white !important;
+        }
+    }
     .container{
         z-index:1;
     }
@@ -42,11 +63,21 @@ const Home = () => {
     }
         `
 
+    console.log(state)
     return (
         <MainDiv id="home">
             <Container>
-                <Navbar style={{ top: '0', position: 'sticky', position: 'absolute', width: '100%', left: '0' }} collapseOnSelect expand="lg" variant="dark">
-                    <Navbar.Brand style={{ color: '#FF7E00', fontWeight: 'bold', fontSize: '30px' }} href="#home">EJBenitez</Navbar.Brand>
+                <Navbar
+                    className={!state ? 'nav-scroll fixed-top' : 'fixed-top'} collapseOnSelect expand="lg" variant="dark">
+                    <Link
+                        activeClass="active"
+                        to="home"
+                        spy={true}
+                        smooth={true}
+                        duration={500}
+                    >
+                        <Navbar.Brand style={{ color: '#FF7E00', fontWeight: 'bold', fontSize: '30px' }} href="#home">EJBenitez</Navbar.Brand>
+                    </Link>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="mr-auto">
@@ -103,7 +134,7 @@ const Home = () => {
             </Container>
             <div className="second-div">
             </div>
-        </MainDiv>
+        </MainDiv >
     )
 }
 
