@@ -29,6 +29,7 @@ const Home = () => {
     min-height:100vh;
     display:flex;
     color:white;
+    background-attachment:fixed;
     text-align:center;
     align-items:center;
     background-size:cover;
@@ -91,7 +92,7 @@ const Home = () => {
                                 spy={true}
                                 smooth={true}
                                 duration={500}
-                                offset={-70}
+                                offset={-80}
                             >  <Nav.Link eventKey={1} href="about" >About</Nav.Link> </Link>
                             <Link
                                 activeClass="active"

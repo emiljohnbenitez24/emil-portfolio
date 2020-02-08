@@ -9,7 +9,7 @@ const Projects = () => {
 
   const MainDiv = styled.div`
     font-family:Roboto Slab, serif;
-    background:#F8F8FF;
+    background:transparent !important;
     text-align:center;
     justify-content:center;
     align-items:center;
