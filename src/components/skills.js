@@ -7,7 +7,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 const MainDiv = styled.div`
     background:black;
     min-height:50vh;
-    font-family:arial cursive;
+    font-family:Roboto Slab, serif;
     text-align:center;
     color:white;
     opacity:.9;

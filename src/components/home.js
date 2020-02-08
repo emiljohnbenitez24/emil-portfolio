@@ -44,6 +44,8 @@ const Home = () => {
     }
     .nav-items .nav-link{
         color:white;
+        font-family: 'Roboto Slab, serif';
+        font-size:20px;
     }
     .nav-items .nav-link:hover{
         opacity:.8;
@@ -76,7 +78,7 @@ const Home = () => {
                         smooth={true}
                         duration={500}
                     >
-                        <Navbar.Brand style={{ color: '#FF7E00', fontWeight: 'bold', fontSize: '30px' }} href="#home">EJBenitez</Navbar.Brand>
+                        <Navbar.Brand style={{ fontFamily: 'Roboto Slab, serif ', color: '#FF7E00', fontWeight: 'bold', fontSize: '40px' }} href="#home">EJBenitez</Navbar.Brand>
                     </Link>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
@@ -89,6 +91,7 @@ const Home = () => {
                                 spy={true}
                                 smooth={true}
                                 duration={500}
+                                offset={-70}
                             >  <Nav.Link eventKey={1} href="about" >About</Nav.Link> </Link>
                             <Link
                                 activeClass="active"
@@ -96,6 +99,7 @@ const Home = () => {
                                 spy={true}
                                 smooth={true}
                                 duration={500}
+                                offset={-70}
                             >
                                 <Nav.Link eventKey={2} href="skills">
                                     Skills
@@ -107,6 +111,7 @@ const Home = () => {
                                 spy={true}
                                 smooth={true}
                                 duration={500}
+                                offset={-70}
                             >
                                 <Nav.Link eventKey={2} href="projects">
                                     Projects
@@ -117,7 +122,7 @@ const Home = () => {
                 </Navbar>
                 <Row>
                     <Col>
-                        <h1 style={{ fontSize: '50px', color: '#FF7E00', fontWeight: 'bold' }}>Hi, Im Emil John</h1>
+                        <h1 style={{ fontFamily: 'Roboto Slab, serif', fontSize: '60px', color: '#FF7E00', fontWeight: 'bold' }}>Hi, Im Emil John</h1>
                         <p style={{ opacity: '.7' }}>ReactJS Web Developer</p>
                     </Col>
                 </Row>

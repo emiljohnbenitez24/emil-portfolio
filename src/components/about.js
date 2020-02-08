@@ -10,7 +10,6 @@ const About = () => {
     const MainDiv = styled.div`
     background:#F8F8FF;
     min-height:60vh;
-    font-family:arial cursive;
     align-items:center;
     text-align:center;
     justify-content:center;
@@ -19,7 +18,11 @@ const About = () => {
         padding:5vh;
     }
     h1{
-        font-weight:bold;
+        width: 100%; 
+        text-align: center; 
+        border-bottom: 2px solid #000; 
+        line-height: 0.1em;
+        margin: 10px 0 20px; 
     }
     p{
         margin-top:10vh;
@@ -30,7 +33,9 @@ const About = () => {
         <MainDiv id="about">
             <Container>
                 <ScrollAnimation animateIn="bounceInRight" animateOnce={true}>
-                    <h1 style={{ color: '#FF7E00' }}>About Me</h1>
+                    <h1 style={{ color: '#FF7E00' }}><span
+                        style={{ background: '#F8F8FF', padding: '0 20px' }}
+                    >About Me</span></h1>
                 </ScrollAnimation>
                 <Row className="about-me">
                     <Col sm={4}>

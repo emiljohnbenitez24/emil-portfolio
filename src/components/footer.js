@@ -10,7 +10,7 @@ import { MdContactPhone, MdEmail } from 'react-icons/md'
 const MainDiv = styled.div`
     background:black;
     opacity:.9;
-    font-family:arial cursive;
+    font-family:Roboto Slab, serif;
     min-height: 35vh;
     color:white;
     align-items:center;
@@ -46,7 +46,7 @@ const Footer = () => {
                 </Row >
                 <Row >
                     <Col>
-                        <h4 style={{ color: '#FF7E00' }}>Contact Me</h4>
+                        <h4 style={{ color: '#FF7E00' }}>Contact Me:</h4>
                     </Col>
 
                 </Row >

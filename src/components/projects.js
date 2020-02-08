@@ -8,7 +8,7 @@ import ScrollAnimation from 'react-animate-on-scroll'
 const Projects = () => {
 
   const MainDiv = styled.div`
-    font-family:arial cursive;
+    font-family:Roboto Slab, serif;
     background:#F8F8FF;
     text-align:center;
     justify-content:center;
@@ -97,7 +97,7 @@ const Projects = () => {
     <MainDiv id="projects">
       <Container style={{ padding: '5vh' }}>
         <ScrollAnimation animateIn="bounceInRight" animateOnce={true}>
-          <h1 style={{ color: '#FF7E00', fontWeight: 'bold' }}>My Projects</h1>
+          <h1 style={{ color: '#FF7E00', fontWeight: 'bold' }}>My Works</h1>
         </ScrollAnimation>
         <Row style={{ padding: '5vh' }}>
           <Col>
