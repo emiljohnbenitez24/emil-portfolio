@@ -11,15 +11,19 @@ const Home = () => {
     const [state, setState] = useState(true)
 
     useEffect(() => {
-        window.addEventListener("scroll", handleScroll)
+        window.onscroll()
     })
 
-    const handleScroll = () => {
-        let scrollTop = window.scrollY;
-        if (scrollTop >= 20) {
-            setState(false)
-        } else {
-            setState(true)
+    window.onscroll = () => {
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function () {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("navbar").style.top = "0px";
+            } else {
+                document.getElementById("navbar").style.top = "-90px";
+            }
+            prevScrollpos = currentScrollPos;
         }
     }
 
@@ -38,7 +42,9 @@ const Home = () => {
     align-items:center;
     background-size:cover;
     position:relative;
-    .nav-scroll{
+    .nav-bar{
+        top: 0px;
+        transition: top 0.5s;
         background-color:#FF7E00;
         .navbar-brand{
             color:white !important;
@@ -46,6 +52,12 @@ const Home = () => {
     }
     .container{
         z-index:1;
+    }
+    .h-tag{
+           font-size:60px;
+           color:#FF7E00;
+           font-family: Roboto Slab, serif;
+           font-weight:bold;
     }
     .nav-items .nav-link{
         color:white;
@@ -57,9 +69,6 @@ const Home = () => {
     }
     .nav-items .nav-link:focus{
         color:orange
-    }
-    h1{
-        font-size:7vh;
     }
     .second-div{
         background:black;
@@ -74,8 +83,8 @@ const Home = () => {
     return (
         <MainDiv id="home">
             <Container>
-                <Navbar
-                    className={!state ? 'nav-scroll fixed-top' : 'fixed-top'} collapseOnSelect expand="lg" variant="dark">
+                <Navbar id="navbar"
+                    className='fixed-top nav-bar' collapseOnSelect expand="lg" variant="dark">
                     <Link
                         activeClass="active"
                         to="home"
@@ -127,7 +136,9 @@ const Home = () => {
                 </Navbar>
                 <Row>
                     <Col>
-                        <h1 style={{ fontFamily: 'Roboto Slab, serif', fontSize: '60px', color: '#FF7E00', fontWeight: 'bold' }}>Hi, Im Emil John</h1>
+                        <h1
+                            className="h-tag"
+                        >Hi, Im Emil John</h1>
                         <p style={{ opacity: '.7' }}>ReactJS Web Developer</p>
                     </Col>
                 </Row>
