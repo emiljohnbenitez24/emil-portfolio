@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Container, Row, Col, Image } from 'react-bootstrap'
-import flower from '.././assets/flower.png'
+import flower from '.././assets/flower.jpg'
+import phone from '.././assets/phone-shopping.jpg'
 import noimage from '.././assets/noimage.jpg';
 import ScrollAnimation from 'react-animate-on-scroll'
 
@@ -17,7 +18,6 @@ const Projects = () => {
     .hovereffect {
         width: 100%;
         height: 100%;
-
         overflow: hidden;
         position: relative;
         text-align: center;
@@ -48,7 +48,7 @@ const Projects = () => {
         transform: scale(1.2);
       }
       
-      .hovereffect h2 {
+      .hovereffect h2, p {
         text-transform: uppercase;
         text-align: center;
         align-items:center;
@@ -62,17 +62,19 @@ const Projects = () => {
       .hovereffect a.info {
         display: inline-block;
         text-decoration: none;
+        border-color:orange !important;
         padding: 5px;
         border: 1px solid #fff;
         margin: 50px 0 0 0;
-        background-color: transparent;
+        background: rgba(0, 0, 0, 0.6);
       }
       
       .hovereffect a.info:hover {
         box-shadow: 0 0 5px #fff;
+        color:orange !important;
       }
       
-      .hovereffect a.info, .hovereffect h2 {
+      .hovereffect a.info, .hovereffect h2, .hovereffect p {
         -webkit-transform: scale(0.7);
         -ms-transform: scale(0.7);
         transform: scale(0.7);
@@ -84,7 +86,7 @@ const Projects = () => {
         text-transform: uppercase;
       }
       
-      .hovereffect:hover a.info, .hovereffect:hover h2 {
+      .hovereffect:hover a.info, .hovereffect:hover h2, .hovereffect:hover p {
         opacity: 1;
         filter: alpha(opacity=100);
         -webkit-transform: scale(0.8);
@@ -103,10 +105,12 @@ const Projects = () => {
           <Col>
             <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
               <div class="hovereffect" style={{ marginBottom: '5vh' }}>
-                <Image width={200} class="img-responsive" src={noimage} />
+                <Image width={200} class="img-responsive" src={phone} />
                 <div class="overlay">
-                  <h2>Todo App</h2>
-                  <a class="info" >Soon To Build</a>
+                  <h2>Shopping Cart</h2>
+                  <p >Using Pure React</p>
+                  <a class="info" href="https://ej-react-shoppingcart.herokuapp.com/">View Project</a>
+                  <a class="info" href="https://github.com/emiljohnbenitez24/pure-react-shoppingcart">View Code</a>
                 </div>
               </div>
             </ScrollAnimation>
@@ -117,6 +121,7 @@ const Projects = () => {
                 <Image width={200} class="img-responsive" src={flower} />
                 <div class="overlay">
                   <h2>FlowerShop WebApp</h2>
+                  <p >Using React w/Redux</p>
                   <a class="info" href="https://ejflowershop.herokuapp.com">View Project</a>
                   <a class="info" href="https://github.com/emiljohnbenitez24/emil-flowershop">View Code</a>
                 </div>
