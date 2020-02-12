@@ -18,10 +18,10 @@ const Home = () => {
         var prevScrollpos = window.pageYOffset;
         window.onscroll = function () {
             var currentScrollPos = window.pageYOffset;
-            if (prevScrollpos > currentScrollPos) {
-                document.getElementById("navbar").style.top = "0px";
-            } else {
-                document.getElementById("navbar").style.top = "-90px";
+            if (prevScrollpos > 20)
+                document.getElementById("navbar").classList.add("navbar-border");
+            else {
+                document.getElementById("navbar").classList.remove("navbar-border")
             }
             prevScrollpos = currentScrollPos;
         }
@@ -43,32 +43,58 @@ const Home = () => {
     background-size:cover;
     position:relative;
     .nav-bar{
-        top: 0px;
-        transition: top 0.5s;
-        background-color:#FF7E00;
-        .navbar-brand{
-            color:white !important;
+        background-color:transparent;
+        -webkit-transition: background-color 0.5s ease-in-out;
+        -moz-transition: background-color 0.5s ease-in-out;
+        -ms-transition: background-color 0.5s ease-in-out;
+        -o-transition: background-color 0.5s ease-in-out;
+        transition: background-color 0.5s ease-in-out;
+        .nav-items .nav-link{
+            color:white;
+            opacity:.7;
+            font-family: 'Roboto Slab, serif';
+            font-size:20px;
+        }
+    }
+    .navbar-border{
+        box-shadow: 0 4px 2px -2px rgba(0,0,0,.2);
+        background-color:#DCDCDC;
+        -webkit-transition: background-color 0.5s ease-in-out;
+        -moz-transition: background-color 0.5s ease-in-out;
+        -ms-transition: background-color 0.5s ease-in-out;
+        -o-transition: background-color 0.5s ease-in-out;
+        transition: background-color 0.5s ease-in-out;
+        .nav-items .nav-link{
+            color:black;
+            opacity:.7;
+            font-family: 'Roboto Slab, serif';
+            font-size:20px;
         }
     }
     .container{
-        z-index:1;
+        z-index:2;
     }
     .h-tag{
-           font-size:60px;
-           color:#FF7E00;
+           font-size:50px;
+           color:#DCDCDC;
            font-family: Roboto Slab, serif;
            font-weight:bold;
     }
-    .nav-items .nav-link{
-        color:white;
-        font-family: 'Roboto Slab, serif';
-        font-size:20px;
-    }
     .nav-items .nav-link:hover{
-        opacity:.8;
+        text-decoration: underline;
+    }
+    .nav-items .nav-link:activer{
+        text-decoration: underline;
     }
     .nav-items .nav-link:focus{
-        color:orange
+        color:#8A2BE2;
+        opacity:1;
+        text-decoration: underline;
+    }
+
+    .nav-items .nav-link:focus{
+        color:#8A2BE2;
+        opacity:1;
     }
     .second-div{
         background:black;
@@ -84,7 +110,7 @@ const Home = () => {
         <MainDiv id="home">
             <Container>
                 <Navbar id="navbar"
-                    className='fixed-top nav-bar' collapseOnSelect expand="lg" variant="dark">
+                    className='fixed-top nav-bar' collapseOnSelect expand="lg" >
                     <Link
                         activeClass="active"
                         to="home"
@@ -92,10 +118,10 @@ const Home = () => {
                         smooth={true}
                         duration={500}
                     >
-                        <Navbar.Brand style={{ fontFamily: 'Roboto Slab, serif ', color: '#FF7E00', fontWeight: 'bold', fontSize: '40px' }} href="#home">EJBenitez</Navbar.Brand>
+                        <Navbar.Brand style={{ fontFamily: 'Roboto Slab, serif ', color: '#8A2BE2', fontWeight: 'bold', fontSize: '35px' }} href="#home">EJBenitez</Navbar.Brand>
                     </Link>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                    <Navbar.Collapse id="responsive-navbar-nav">
+                    <Navbar.Collapse id="responsive-navbar-nav" >
                         <Nav className="mr-auto">
                         </Nav>
                         <Nav className="nav-items">
@@ -106,7 +132,7 @@ const Home = () => {
                                 smooth={true}
                                 duration={500}
                                 offset={-80}
-                            >  <Nav.Link eventKey={1} href="about" >About</Nav.Link> </Link>
+                            >  <Nav.Link href="about" >About</Nav.Link> </Link>
                             <Link
                                 activeClass="active"
                                 to="skills"
@@ -115,7 +141,7 @@ const Home = () => {
                                 duration={500}
                                 offset={-70}
                             >
-                                <Nav.Link eventKey={2} href="skills">
+                                <Nav.Link href="skills">
                                     Skills
                                 </Nav.Link>
                             </Link>
@@ -127,7 +153,7 @@ const Home = () => {
                                 duration={500}
                                 offset={-70}
                             >
-                                <Nav.Link eventKey={2} href="projects">
+                                <Nav.Link href="projects">
                                     Projects
                                 </Nav.Link>
                             </Link>
@@ -138,7 +164,7 @@ const Home = () => {
                     <Col>
                         <h1
                             className="h-tag"
-                        >Hi, Im Emil John</h1>
+                        >Hi, Im Emil</h1>
                         <p style={{ opacity: '.7' }}>ReactJS Web Developer</p>
                     </Col>
                 </Row>

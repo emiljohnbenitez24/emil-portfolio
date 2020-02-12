@@ -1,16 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Container, Row, Col } from 'react-bootstrap'
+import { Image, Row, Col, ProgressBar } from 'react-bootstrap'
+import frontEnd from '../assets/front-end.png'
+import backEnd from '../assets/back-end.png'
+import database from '../assets/database.png'
 import ScrollAnimation from 'react-animate-on-scroll';
 
 
 const MainDiv = styled.div`
-    background:black;
-    min-height:50vh;
-    font-family:Roboto Slab, serif;
+    background:#8A2BE2;
+    min-height:60vh;
+    align-items:center;
     text-align:center;
     color:white;
-    opacity:.9;
     p{
         font-size:12px;
         opacity:.7;
@@ -20,39 +22,65 @@ const MainDiv = styled.div`
 const Skills = () => {
     return (
         <MainDiv id="skills">
-            <Container>
-                <ScrollAnimation animateIn="bounceInLeft" animateOnce={true}>
-                    <h1 style={{ color: '#FF7E00', fontWeight: 'bold', padding: '5vh' }}>My Skills</h1>
-                </ScrollAnimation>
-                <Row style={{ padding: '5vh' }} className="justify-content-md-center">
-                    <Col md="auto">
-                        <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
-                            <h4 style={{ color: '#FF7E00' }}>Front End</h4>
-                            <hr style={{ border: '5px solid white', width: '15vh' }} />
-                            <p>HTML5</p>
-                            <p>CSS3</p>
-                            <p>Photoshop</p>
-                            <p>Javascript</p>
-                            <p>ReactJS & Redux</p>
-                        </ScrollAnimation>
-                    </Col>
-                    <Col md="auto">
-                        <ScrollAnimation animateIn="fadeIn" delay={500} animateOnce={true}>
-                            <h4 style={{ color: '#FF7E00' }}> Back End</h4>
-                            <hr style={{ border: '5px solid white', width: '15vh' }} />
+            <ScrollAnimation animateIn="bounceInLeft" animateOnce={true}>
+                <h1 style={{ color: 'white', opacity: '.7', fontWeight: 'bold', padding: '5vh' }}>My Skills</h1>
+            </ScrollAnimation>
+            <Row style={{ padding: '5vh', flexBox: '2' }} className="justify-content-md-center">
+                <Col sm={4}>
+                    <h1 style={{ color: 'white', opacity: '.7' }}>Front-End</h1>
+                    <Image src={frontEnd} width={100} />
+                    <Row style={{ margin: '20px 0px 20px 0px' }}>
+                        <Col>
+                            <p>HTML</p>
+                            <p>CSS</p>
+                            <p>JAVASCRIPT</p>
+                            <p>REACTJS</p>
+                            <p>REDUX</p>
+                            <p>PHOTOSHOP</p>
+                        </Col>
+                        <Col>
+                            <ProgressBar animated style={{ marginBottom: '18px' }} variant="success" now={80} />
+                            <ProgressBar animated style={{ marginBottom: '18px' }} striped variant="info" now={60} />
+                            <ProgressBar animated style={{ marginBottom: '18px' }} striped variant="warning" now={60} />
+                            <ProgressBar animated style={{ marginBottom: '18px' }} striped variant="primary" now={50} />
+                            <ProgressBar animated style={{ marginBottom: '18px' }} striped variant="secondary" now={50} />
+                            <ProgressBar animated style={{ marginBottom: '18px' }} striped variant="dark" now={70} />
+                        </Col>
+                    </Row>
+                </Col>
+                <Col sm={4}>
+                    <h1 style={{ color: 'white', opacity: '.7' }}>Back-End</h1>
+                    <Image src={backEnd} width={100} />
+                    <Row style={{ margin: '20px 0px 20px 0px' }}>
+                        <Col>
                             <p>PHP</p>
-                        </ScrollAnimation>
-                    </Col>
-                    <Col md="auto">
-                        <ScrollAnimation animateIn="fadeIn" delay={1000} animateOnce={true}>
-                            <h4 style={{ color: '#FF7E00' }}>Database</h4>
-                            <hr style={{ border: '5px solid white', width: '15vh' }} />
-                            <p>MySql</p>
-                            <p>MongoDB</p>
-                        </ScrollAnimation>
-                    </Col>
-                </Row>
-            </Container>
+                            <p>NODEJS</p>
+                            <p>EXPRESS</p>
+                        </Col>
+                        <Col>
+                            <ProgressBar animated style={{ marginBottom: '18px' }} striped variant="success" now={50} />
+                            <ProgressBar animated style={{ marginBottom: '18px' }} striped variant="info" now={40} />
+                            <ProgressBar animated style={{ marginBottom: '18px' }} striped variant="warning" now={40} />
+                        </Col>
+                    </Row>
+                </Col>
+                <Col sm={4}>
+                    <h1 style={{ color: 'white', opacity: '.7' }}>Database</h1>
+                    <Image src={database} rounded width={100} />
+                    <Row style={{ margin: '20px 0px 20px 0px' }}>
+                        <Col>
+                            <p>MONGGODB</p>
+                            <p>MONGOOSE</p>
+                            <p>MYSQL</p>
+                        </Col>
+                        <Col>
+                            <ProgressBar animated style={{ marginBottom: '18px' }} striped variant="success" now={40} />
+                            <ProgressBar animated style={{ marginBottom: '18px' }} striped variant="info" now={40} />
+                            <ProgressBar animated style={{ marginBottom: '18px' }} striped variant="warning" now={60} />
+                        </Col>
+                    </Row>
+                </Col>
+            </Row>
         </MainDiv>
     )
 }

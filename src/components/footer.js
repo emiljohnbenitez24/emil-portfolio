@@ -8,10 +8,10 @@ import { MdContactPhone, MdEmail } from 'react-icons/md'
 
 
 const MainDiv = styled.div`
-    background:black;
-    opacity:.9;
+    background:#DCDCDC;
+    box-shadow: 0px 10px 5px #888, 0px -2px 5px #888;
     font-family:Roboto Slab, serif;
-    min-height: 35vh;
+    min-height: 60vh;
     color:white;
     align-items:center;
     justify-content:center;
@@ -36,29 +36,29 @@ const Footer = () => {
                 </Link>
                 <Row style={{ padding: '4vh' }}>
                     <Col>
-                        <a style={{ color: '#FF7E00' }} href="https://www.facebook.com/kriemjohn.benitez.7"><FaFacebook size={20} style={{ marginRight: '2vh' }} /></a>
-                        <a style={{ color: '#FF7E00' }} href="https://www.linkedin.com/in/emil-john-benitez-11987b146/"><FaLinkedin size={20} style={{ marginRight: '2vh' }} /></a>
-                        <a style={{ color: '#FF7E00' }} href="https://github.com/emiljohnbenitez24"><FaGithub size={20} style={{ marginRight: '2vh' }} /></a>
-                        <a style={{ color: '#FF7E00' }} href="#"><FaInstagram size={20} style={{ marginRight: '2vh' }} /></a>
-                        <a style={{ color: '#FF7E00' }} href="#"><FaTwitterSquare size={20} /></a>
+                        <a style={{ color: '#8A2BE2' }} href="https://www.facebook.com/kriemjohn.benitez.7"><FaFacebook size={20} style={{ marginRight: '2vh' }} /></a>
+                        <a style={{ color: '#8A2BE2' }} href="https://www.linkedin.com/in/emil-john-benitez-11987b146/"><FaLinkedin size={20} style={{ marginRight: '2vh' }} /></a>
+                        <a style={{ color: '#8A2BE2' }} href="https://github.com/emiljohnbenitez24"><FaGithub size={20} style={{ marginRight: '2vh' }} /></a>
+                        <a style={{ color: '#8A2BE2' }} href="#"><FaInstagram size={20} style={{ marginRight: '2vh' }} /></a>
+                        <a style={{ color: '#8A2BE2' }} href="#"><FaTwitterSquare size={20} /></a>
 
                     </Col>
                 </Row >
                 <Row >
                     <Col>
-                        <h4 style={{ color: '#FF7E00' }}>Contact Me:</h4>
+                        <h4 style={{ color: '#8A2BE2' }}>Contact Me:</h4>
                     </Col>
 
                 </Row >
                 <Row >
                     <Col>
-                        <MdContactPhone style={{ color: '#FF7E00' }} size={20} /> 09166047725
-                   </Col>
+                        <MdContactPhone style={{ color: '#8A2BE2' }} size={20} /> <span style={{ color: '#000', opacity: '.7' }}>09166047725</span>
+                    </Col>
                 </Row >
                 <Row >
                     <Col>
-                        <MdEmail style={{ color: '#FF7E00' }} size={20} /> emiljohnbenitez24@gmail.com
-                   </Col>
+                        <MdEmail style={{ color: '#8A2BE2' }} size={20} /> <span style={{ color: '#000', opacity: '.7' }}>emiljohnbenitez24@gmail.com</span>
+                    </Col>
 
                 </Row >
             </Container >
