@@ -59,13 +59,15 @@ const Projects = () => {
         font-size: 17px;
         padding: 10px;
       }
-      
+      .button-container{
+        margin-top:50px;
+      }
       .hovereffect a.info {
         display: inline-block;
         text-decoration:none;
         padding: 5px;
         border: 2px solid #8A2BE2;
-        margin: 50px 10px 0 10px;
+        margin: 0px 5px 0px 5px;
         background: rgba(0, 0, 0, 0.6);
       }
       
@@ -88,48 +90,50 @@ const Projects = () => {
 
   return (
     <MainDiv id="projects">
-      <Container style={{ padding: '5vh' }}>
-        <ScrollAnimation animateIn="bounceInRight" animateOnce={true}>
-          <h1 style={{ color: '#000', opacity: '.7', fontWeight: 'bold' }}>My Works</h1>
-        </ScrollAnimation>
-        <Row style={{ padding: '10vh' }} className="justify-content-md-center">
-          <Col sm={4}>
-            <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
-              <div class="hovereffect" style={{ marginBottom: '5vh' }}>
-                <Image width={200} class="img-responsive" src={phone} />
-                <div class="overlay">
-                  <h2>Shopping Cart <p >Using Pure React</p></h2>
+      <ScrollAnimation animateIn="bounceInRight" animateOnce={true}>
+        <h1 style={{ color: '#000', opacity: '.7', fontWeight: 'bold' }}>My Works</h1>
+      </ScrollAnimation>
+      <Row style={{ padding: '10vh' }} className="justify-content-md-center">
+        <Col sm={4} style={{ marginTop: '5vh' }}>
+          <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
+            <div class="hovereffect" style={{ marginBottom: '5vh' }}>
+              <Image width={200} class="img-responsive" src={phone} />
+              <div class="overlay">
+                <h2>Shopping Cart <p >Using Pure React</p></h2>
+                <div className="button-container">
                   <a class="info" href="https://ej-react-shoppingcart.herokuapp.com/">View Project</a>
                   <a class="info" href="https://github.com/emiljohnbenitez24/pure-react-shoppingcart">View Code</a>
                 </div>
               </div>
-            </ScrollAnimation>
-          </Col>
-          <Col sm={4}>
-            <ScrollAnimation animateIn="fadeIn" delay={500} animateOnce={true}>
-              <div class="hovereffect" style={{ marginBottom: '5vh' }}>
-                <Image width={200} class="img-responsive" src={flower} />
-                <div class="overlay">
-                  <h2>FlowerShop WebApp <p >Using React w/Redux</p></h2>
+            </div>
+          </ScrollAnimation>
+        </Col>
+        <Col sm={4} style={{ marginTop: '5vh' }}>
+          <ScrollAnimation animateIn="fadeIn" delay={500} animateOnce={true}>
+            <div class="hovereffect" style={{ marginBottom: '5vh' }}>
+              <Image width={200} class="img-responsive" src={flower} />
+              <div class="overlay">
+                <h2>FlowerShop WebApp <p >Using React w/Redux</p></h2>
+                <div className="button-container">
                   <a class="info" href="https://ejflowershop.herokuapp.com">View Project</a>
                   <a class="info" href="https://github.com/emiljohnbenitez24/emil-flowershop">View Code</a>
                 </div>
               </div>
-            </ScrollAnimation>
-          </Col>
-          <Col sm={4}>
-            <ScrollAnimation animateIn="fadeIn" delay={1000} animateOnce={true}>
-              <div class="hovereffect">
-                <Image width={200} class="img-responsive" src={noimage} />
-                <div class="overlay">
-                  <h2>Evaluation WebApp</h2>
-                  <a class="info" >Soon To Build</a>
-                </div>
+            </div>
+          </ScrollAnimation>
+        </Col>
+        <Col sm={4} style={{ marginTop: '5vh' }}>
+          <ScrollAnimation animateIn="fadeIn" delay={1000} animateOnce={true}>
+            <div class="hovereffect">
+              <Image width={200} class="img-responsive" src={noimage} />
+              <div class="overlay">
+                <h2>Evaluation WebApp</h2>
+                <a class="info" >Soon To Build</a>
               </div>
-            </ScrollAnimation>
-          </Col>
-        </Row>
-      </Container>
+            </div>
+          </ScrollAnimation>
+        </Col>
+      </Row>
 
     </MainDiv>
 
