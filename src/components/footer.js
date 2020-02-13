@@ -11,7 +11,7 @@ const MainDiv = styled.div`
     background:#DCDCDC;
     box-shadow: 0px 10px 5px #888, 0px -2px 5px #888;
     font-family:Roboto Slab, serif;
-    min-height: 60vh;
+    min-height: 65vh;
     align-items:center;
     justify-content:center;
     text-align:center;
@@ -35,8 +35,8 @@ const Footer = () => {
                 </Link>
                 <Row style={{ padding: '4vh', border: '2px solid #8A2BE2', height: '80vh', margin: '40px 10px 10px 10px' }}>
                     <Col>
-                        <h1 style={{ color: 'black', opacity: '.7' }}>Get In Touch</h1>
-                        <Form>
+                        <h3 style={{ color: 'black', opacity: '.7' }}>Get In Touch</h3>
+                        <Form style={{ marginTop: '5vh' }}>
                             <Form.Group controlId="formBasicEmail">
                                 <Form.Label>Name</Form.Label>
                                 <Form.Control type="text" placeholder="Enter name" required />

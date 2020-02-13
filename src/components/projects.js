@@ -92,11 +92,11 @@ const Projects = () => {
         <ScrollAnimation animateIn="bounceInRight" animateOnce={true}>
           <h1 style={{ color: '#000', opacity: '.7', fontWeight: 'bold' }}>My Works</h1>
         </ScrollAnimation>
-        <Row style={{ padding: '10vh' }}>
-          <Col>
+        <Row style={{ padding: '10vh' }} className="justify-content-md-center">
+          <Col sm={4}>
             <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
               <div class="hovereffect" style={{ marginBottom: '5vh' }}>
-                <Image width={200} height={225} class="img-responsive" src={phone} />
+                <Image width={200} class="img-responsive" src={phone} />
                 <div class="overlay">
                   <h2>Shopping Cart <p >Using Pure React</p></h2>
                   <a class="info" href="https://ej-react-shoppingcart.herokuapp.com/">View Project</a>
@@ -105,10 +105,10 @@ const Projects = () => {
               </div>
             </ScrollAnimation>
           </Col>
-          <Col>
+          <Col sm={4}>
             <ScrollAnimation animateIn="fadeIn" delay={500} animateOnce={true}>
               <div class="hovereffect" style={{ marginBottom: '5vh' }}>
-                <Image width={200} height={210} class="img-responsive" src={flower} />
+                <Image width={200} class="img-responsive" src={flower} />
                 <div class="overlay">
                   <h2>FlowerShop WebApp <p >Using React w/Redux</p></h2>
                   <a class="info" href="https://ejflowershop.herokuapp.com">View Project</a>
@@ -117,7 +117,7 @@ const Projects = () => {
               </div>
             </ScrollAnimation>
           </Col>
-          <Col>
+          <Col sm={4}>
             <ScrollAnimation animateIn="fadeIn" delay={1000} animateOnce={true}>
               <div class="hovereffect">
                 <Image width={200} class="img-responsive" src={noimage} />
