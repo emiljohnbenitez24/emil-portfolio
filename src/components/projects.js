@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Container, Row, Col, Image } from 'react-bootstrap'
-import flower from '.././assets/flower.jpg'
-import phone from '.././assets/phone-shopping.jpg'
+import flower from '.././assets/flower.png'
+import phone from '.././assets/phone.png'
 import noimage from '.././assets/noimage.jpg';
 import ScrollAnimation from 'react-animate-on-scroll'
 
@@ -101,11 +101,11 @@ const Projects = () => {
         <ScrollAnimation animateIn="bounceInRight" animateOnce={true}>
           <h1 style={{ color: '#000', opacity: '.7', fontWeight: 'bold' }}>My Works</h1>
         </ScrollAnimation>
-        <Row style={{ padding: '5vh' }}>
+        <Row style={{ padding: '10vh' }}>
           <Col>
             <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
               <div class="hovereffect" style={{ marginBottom: '5vh' }}>
-                <Image width={200} height={225} class="img-responsive" src={phone} />
+                <Image width={200} style={{ padding: '5vh' }} height={225} class="img-responsive" src={phone} />
                 <div class="overlay">
                   <h2>Shopping Cart <p >Using Pure React</p></h2>
                   <a class="info" href="https://ej-react-shoppingcart.herokuapp.com/">View Project</a>
@@ -117,7 +117,7 @@ const Projects = () => {
           <Col>
             <ScrollAnimation animateIn="fadeIn" delay={500} animateOnce={true}>
               <div class="hovereffect" style={{ marginBottom: '5vh' }}>
-                <Image width={200} class="img-responsive" src={flower} />
+                <Image width={200} height={210} class="img-responsive" src={flower} />
                 <div class="overlay">
                   <h2>FlowerShop WebApp            <p >Using React w/Redux</p></h2>
                   <a class="info" href="https://ejflowershop.herokuapp.com">View Project</a>

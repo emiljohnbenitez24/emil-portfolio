@@ -5,7 +5,8 @@ import styled from 'styled-components'
 
 const MainContainer = styled.div`
     background:#000 url(${mountainImg});
-    min-height:80vh;
+    min-height:60vh;
+    font-family: 'Lemonada', cursive;
     display:flex;
     background-size:100% 100%;
     background-attachment:fixed;

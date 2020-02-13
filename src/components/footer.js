@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components'
 import { IoIosArrowUp } from 'react-icons/io'
 import { Link } from 'react-scroll'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Form, Button, Container, Row, Col } from 'react-bootstrap'
 import { FaFacebook, FaGithub, FaInstagram, FaTwitterSquare, FaLinkedin } from 'react-icons/fa'
 import { MdContactPhone, MdEmail } from 'react-icons/md'
 
@@ -12,7 +12,6 @@ const MainDiv = styled.div`
     box-shadow: 0px 10px 5px #888, 0px -2px 5px #888;
     font-family:Roboto Slab, serif;
     min-height: 60vh;
-    color:white;
     align-items:center;
     justify-content:center;
     text-align:center;
@@ -32,34 +31,42 @@ const Footer = () => {
                     smooth={true}
                     duration={500}
                 > <IoIosArrowUp size={32}
-                    />
+                    style={{ color: '#8A2BE2' }} />
                 </Link>
+                <Row style={{ padding: '4vh', border: '2px solid #8A2BE2', height: '80vh', margin: '40px 10px 10px 10px' }}>
+                    <Col>
+                        <h1 style={{ color: 'black', opacity: '.7' }}>Get In Touch</h1>
+                        <Form>
+                            <Form.Group controlId="formBasicEmail">
+                                <Form.Label>Name</Form.Label>
+                                <Form.Control type="text" placeholder="Enter name" required />
+                            </Form.Group>
+                            <Form.Group controlId="formBasicPassword">
+                                <Form.Label>Email</Form.Label>
+                                <Form.Control type="email" placeholder="Enter Email" required />
+                                <Form.Text className="text-muted">
+                                    I'll never share your email with anyone else.
+                                  </Form.Text>
+                            </Form.Group>
+                            <Form.Group controlId="exampleForm.ControlTextarea1">
+                                <Form.Label>Comment</Form.Label>
+                                <Form.Control placeholder="Enter Comment" as="textarea" rows="3" required />
+                            </Form.Group>
+                            <Button style={{ backgroundColor: '#8A2BE2' }} type="submit">
+                                Submit
+  </Button>
+                        </Form>
+                    </Col>
+                </Row >
                 <Row style={{ padding: '4vh' }}>
                     <Col>
-                        <a style={{ color: '#8A2BE2' }} href="https://www.facebook.com/kriemjohn.benitez.7"><FaFacebook size={20} style={{ marginRight: '2vh' }} /></a>
-                        <a style={{ color: '#8A2BE2' }} href="https://www.linkedin.com/in/emil-john-benitez-11987b146/"><FaLinkedin size={20} style={{ marginRight: '2vh' }} /></a>
-                        <a style={{ color: '#8A2BE2' }} href="https://github.com/emiljohnbenitez24"><FaGithub size={20} style={{ marginRight: '2vh' }} /></a>
-                        <a style={{ color: '#8A2BE2' }} href="#"><FaInstagram size={20} style={{ marginRight: '2vh' }} /></a>
-                        <a style={{ color: '#8A2BE2' }} href="#"><FaTwitterSquare size={20} /></a>
+                        <a style={{ color: '#8A2BE2' }} href="https://www.facebook.com/kriemjohn.benitez.7"><FaFacebook size={32} style={{ marginRight: '2vh' }} /></a>
+                        <a style={{ color: '#8A2BE2' }} href="https://www.linkedin.com/in/emil-john-benitez-11987b146/"><FaLinkedin size={32} style={{ marginRight: '2vh' }} /></a>
+                        <a style={{ color: '#8A2BE2' }} href="https://github.com/emiljohnbenitez24"><FaGithub size={32} style={{ marginRight: '2vh' }} /></a>
+                        <a style={{ color: '#8A2BE2' }} href="#"><FaInstagram size={32} style={{ marginRight: '2vh' }} /></a>
+                        <a style={{ color: '#8A2BE2' }} href="#"><FaTwitterSquare size={32} /></a>
 
                     </Col>
-                </Row >
-                <Row >
-                    <Col>
-                        <h4 style={{ color: '#8A2BE2' }}>Contact Me:</h4>
-                    </Col>
-
-                </Row >
-                <Row >
-                    <Col>
-                        <MdContactPhone style={{ color: '#8A2BE2' }} size={20} /> <span style={{ color: '#000', opacity: '.7' }}>09166047725</span>
-                    </Col>
-                </Row >
-                <Row >
-                    <Col>
-                        <MdEmail style={{ color: '#8A2BE2' }} size={20} /> <span style={{ color: '#000', opacity: '.7' }}>emiljohnbenitez24@gmail.com</span>
-                    </Col>
-
                 </Row >
             </Container >
         </MainDiv >

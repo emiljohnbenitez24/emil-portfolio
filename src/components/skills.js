@@ -12,6 +12,7 @@ const MainDiv = styled.div`
     min-height:60vh;
     align-items:center;
     text-align:center;
+    justify-content:center;
     color:white;
     p{
         font-size:12px;
@@ -25,8 +26,8 @@ const Skills = () => {
             <ScrollAnimation animateIn="bounceInLeft" animateOnce={true}>
                 <h1 style={{ color: 'white', opacity: '.7', fontWeight: 'bold', padding: '5vh' }}>My Skills</h1>
             </ScrollAnimation>
-            <Row style={{ padding: '5vh', flexBox: '2' }} className="justify-content-md-center">
-                <Col sm={4}>
+            <Row style={{ marginTop: '10vh' }}>
+                <Col sm={4} style={{ padding: '5vh' }}>
                     <h1 style={{ color: 'white', opacity: '.7' }}>Front-End</h1>
                     <Image src={frontEnd} width={100} />
                     <Row style={{ margin: '20px 0px 20px 0px' }}>
@@ -48,7 +49,7 @@ const Skills = () => {
                         </Col>
                     </Row>
                 </Col>
-                <Col sm={4}>
+                <Col sm={4} style={{ padding: '5vh' }}>
                     <h1 style={{ color: 'white', opacity: '.7' }}>Back-End</h1>
                     <Image src={backEnd} width={100} />
                     <Row style={{ margin: '20px 0px 20px 0px' }}>
@@ -64,7 +65,7 @@ const Skills = () => {
                         </Col>
                     </Row>
                 </Col>
-                <Col sm={4}>
+                <Col sm={4} style={{ padding: '5vh' }}>
                     <h1 style={{ color: 'white', opacity: '.7' }}>Database</h1>
                     <Image src={database} rounded width={100} />
                     <Row style={{ margin: '20px 0px 20px 0px' }}>

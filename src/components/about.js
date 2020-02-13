@@ -39,7 +39,7 @@ const About = () => {
                 <Row className="about-me">
                     <Col sm={4} style={{ textAlign: 'center' }}>
                         <ScrollAnimation animateIn="bounceInLeft" animateOnce={true}>
-                            <Image src={emilImg} style={{ boxShadow: '10px 10px 5px #8A2BE2' }} width={200} height={200}></Image>
+                            <Image src={emilImg} style={{ boxShadow: '5px 5px #8A2BE2' }} width={200} height={200}></Image>
                         </ScrollAnimation>
                     </Col>
                     <Col sm={8}>
